@@ -1,0 +1,205 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body and background */
+body {
+  background: linear-gradient(to bottom, #2c003e, #5c007f);
+  color: #f0f0f0;
+  line-height: 1.7;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Header */
+header {
+  background-color: #3b0060;
+  padding: 20px 10%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+  font-size: 2.7rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #d3b3ff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #7a3fff;
+  color: #fff;
+  transform: scale(1.1) rotate(1deg);
+}
+
+/* Main sections */
+main {
+  padding: 60px 10%;
+}
+
+/* Intro sections */
+.intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f8f8ff;
+}
+
+.intro p {
+  font-size: 1.15rem;
+  margin-bottom: 25px;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro .main-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 45px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.intro .main-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Highlight cards */
+.highlights, .sub-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  background: linear-gradient(135deg, #5c007f, #8f00ff);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  width: 320px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.card h3 {
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.card p, .card ul, .card ol {
+  color: #e0d0ff;
+  font-size: 1rem;
+}
+
+/* Nested lists styling */
+.content ul ul {
+  margin-left: 20px;
+  list-style-type: circle;
+}
+
+/* Tables styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+table, th, td {
+  border: 1px solid #d3b3ff;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #7a3fff;
+  color: #fff;
+}
+
+td {
+  background-color: rgba(92,0,127,0.7);
+}
+
+/* Footer */
+footer {
+  background-color: #3b0060;
+  text-align: center;
+  padding: 25px 10%;
+  margin-top: 50px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+}
+
+footer p {
+  color: #d3b3ff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .highlights, .sub-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li a {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
